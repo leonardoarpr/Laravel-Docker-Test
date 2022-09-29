@@ -28,7 +28,7 @@ If your user UID is different from 1000 make sure HOST_UID env var it's correctl
 
 ## TESTS
 ### VENDOR DOCKER
-- Run command `docker-compose exec php sh -c "./vendor/bin/phpunit --verbose tests/VendorTestCase.php"`
+- Run command `./script/exec.sh "./vendor/bin/phpunit --verbose tests/VendorTestCase.php"`
 
 ### LOCAL
 - Run with your IDE `tests/SimpleTestCase.php`
