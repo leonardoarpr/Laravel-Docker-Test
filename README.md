@@ -7,7 +7,7 @@
 
 # Description
 
-[This](https://github.com/jjuanrivvera99/laravel-nginx-mysql-docker) is a complete laravel environment using docker-compose with the following services: nginx, queue daemon, redis, mysql, scheduler and node js.
+This is a test for company 
 
 ## How to run this project
 
@@ -18,13 +18,20 @@ Take the following steps:
 - clone this repository by executing the following command: 'git clone https://github.com/jjuanrivvera99/laravel-nginx-mysql-docker'
 - change directory: 'cd laravel-nginx-mysql-docker'
 - run command: 'cp .env.example .env'
-- run command: 'docker-compose up -d --build'
-- run command: 'docker-compose exec php sh -c "composer update -d /var/www" '
-- run command: 'docker-compose exec php sh -c "php /var/www/artisan key:generate" '
-- run command: 'docker-compose exec php sh -c "chmod 775 -R /var/www/storage" '
-- run command: 'docker-compose restart nginx'
+- run command: `docker-compose up -d --build`
+- run command: `docker-compose exec php sh -c "composer update -d /var/www" `
+- run command: `docker-compose exec php sh -c "php /var/www/artisan key:generate" `
+- run command: `docker-compose exec php sh -c "chmod 775 -R /var/www/storage" `
+- run command: `docker-compose restart nginx`
 
 If your user UID is different from 1000 make sure HOST_UID env var it's correctly setup.
+
+## TESTS
+### VENDOR DOCKER
+- Run command `docker-compose exec php sh -c "./vendor/bin/phpunit --verbose tests/VendorTestCase.php"`
+
+### LOCAL
+- Run with your IDE `tests/SimpleTestCase.php`
 
 ## License
 

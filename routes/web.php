@@ -14,3 +14,5 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/affiliates/distance/{km}', [\App\Http\Controllers\AffiliatesController::class, 'getAffiliates']);
