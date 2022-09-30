@@ -1,0 +1,43 @@
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+
+body {
+    max-width: max-content;
+    margin: auto;
+}
+
+#affiliates td, #affiliates th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    min-width: 300px;
+    text-align: center;
+}
+
+#affiliates tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#affiliates tr:hover {
+    background-color: #ddd;
+}
+
+#affiliates th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    background-color: #04AA6D;
+    color: white;
+}
+select:focus {
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
+}
+select {
+    border-style: none;
+}

@@ -40,10 +40,11 @@ class AffiliateService
                 $affiliate['latitude'],
                 $affiliate['longitude']
             );
-            if($distance <= $this->km){
+            if ($this->km >= $distance) {
                 $closestDubling[] = $affiliate;
             }
         }
+
         return $closestDubling;
     }
 
@@ -54,7 +55,7 @@ class AffiliateService
      * @param float $lon2
      * @return float
      */
-    private function distanceCalculator(float $lat1, float $lon1, float $lat2, float $lon2):float
+    private function distanceCalculator(float $lat1, float $lon1, float $lat2, float $lon2): float
     {
         $lat1 = deg2rad($lat1);
         $lat2 = deg2rad($lat2);

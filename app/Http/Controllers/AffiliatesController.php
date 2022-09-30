@@ -12,7 +12,6 @@ class AffiliatesController extends BaseController
     public function getAffiliates(Request $response, float $km = 100): JsonResponse
     {
         $affiliatesService = new AffiliateService($km);
-        $affiliatesClosestDubling = $affiliatesService->getAffiliatesClosestDubling();
-        return new JsonResponse($affiliatesClosestDubling);
+        return new JsonResponse($affiliatesService->getAffiliatesClosestDubling());
     }
 }
