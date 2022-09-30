@@ -41,9 +41,11 @@ class AffiliateService
                 $affiliate['longitude']
             );
             if ($this->km >= $distance) {
-                $closestDubling[] = $affiliate;
+                $closestDubling[$affiliate['affiliate_id']] = $affiliate;
             }
         }
+
+        ksort($closestDubling);
 
         return $closestDubling;
     }
