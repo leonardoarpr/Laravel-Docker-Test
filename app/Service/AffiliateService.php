@@ -65,7 +65,6 @@ class AffiliateService
         $lon2 = deg2rad($lon2);
 
         $dist = (6371 * acos(cos($lat1) * cos($lat2) * cos($lon2 - $lon1) + sin($lat1) * sin($lat2)));
-        $dist = (float)number_format($dist, 2, '.', '');
-        return $dist;
+        return (float)number_format($dist, 2, '.', '');
     }
 }
