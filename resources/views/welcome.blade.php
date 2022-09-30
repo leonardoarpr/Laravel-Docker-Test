@@ -26,6 +26,7 @@
             <tr>
                 <th>ID</th>
                 <th>NAME</th>
+                <th>DISTANCE (KM)</th>
             </tr>
             </thead>
             <tbody></tbody>

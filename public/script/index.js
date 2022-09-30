@@ -7,6 +7,7 @@ let createTable = (distance) => {
             html += '<tr>';
             html += '    <td>' + affiliates[i]["affiliate_id"] + '</td>';
             html += '    <td>' + affiliates[i]["name"] + '</td>';
+            html += '    <td>' + affiliates[i]["distance"] + '</td>';
             html += '<tr>';
         }
         $('#affiliates tbody').html(html);
