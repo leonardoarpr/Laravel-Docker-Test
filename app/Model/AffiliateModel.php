@@ -2,9 +2,11 @@
 
 namespace App\Model;
 
-class AffiliateModel
-{
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Storage;
 
+class AffiliateModel extends Model
+{
     /**
      * @var array
      */
@@ -17,13 +19,12 @@ class AffiliateModel
 
     protected function getAffiliatesArray()
     {
-        $json = base_path() .'/clientList/affiliates.json';
-        $affiliates = json_decode(file_get_contents($json), true);
+        $json = Storage::disk('local')->get('public/clientList/affiliates.json');
+        $affiliates = json_decode($json, true);
         return $affiliates['affiliates'];
     }
 
     public function getAffiliates(){
         return $this->affiliates;
     }
-
 }
